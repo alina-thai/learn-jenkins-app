@@ -8,12 +8,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                    git branch: 'main', credentialsId: 'GitHub', url: 'https://github.com/alina-thai/learn-jenkins-app.git'
-            }
-        }
-
         stage('Build') {
             agent {
                 docker {
